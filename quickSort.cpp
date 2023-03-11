@@ -34,16 +34,12 @@ void quickSort(std::vector<int> &v, int s, int e) {
 }
 int main() {
     FASTER;
-#ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-#endif
 
     int t; cin >> t; for (int i = 1; i <= t; i++) {
-  int size; cin>>size
+    int size; cin>>size;
     vector<int>v(size);
+    for(auto &i:v)cin>>i;
     quickSort(v, 0, size-1);
-   
     for (auto i : v)cout << i << " ";
     cout << endl;
 
